@@ -59,6 +59,7 @@
     <orderEntry type="library" scope="PROVIDED" name="erubi (v1.10.0, ruby-2.6.8-p205) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="execjs (v2.8.1, ruby-2.6.8-p205) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ffi (v1.15.5, ruby-2.6.8-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="flex-slider-rails (v2.7.0, ruby-2.6.8-p205) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="globalid (v1.0.0, ruby-2.6.8-p205) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v1.8.11, ruby-2.6.8-p205) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="io-like (v0.3.1, ruby-2.6.8-p205) [gem]" level="application" />

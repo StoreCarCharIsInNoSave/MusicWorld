@@ -15,6 +15,7 @@
 //= require activestorage
 //= require turbolinks
 //= require semantic-ui
+//= require jquery.flexslider
 //= require_tree .
 
 $(document).on('turbolinks:load', function () {
@@ -26,4 +27,8 @@ $(document).on('turbolinks:load', function () {
             ;
         })
     ;
+});
+$(document).on("turbolinks:load", function() {
+    $('.flexslider').flexslider();
+
 });
