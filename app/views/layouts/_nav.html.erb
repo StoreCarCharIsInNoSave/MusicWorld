@@ -1,0 +1,31 @@
+<div class="ui mini menu massive inverted">
+  <a class="active item">
+    MusicWorld
+  </a>
+  <a class=" item">
+    Контакты
+  </a>
+  <a class="item">
+    Информация
+  </a>
+  <a class="item">
+    Об услугах
+  </a>
+  <a class="item">
+    Отзывы
+  </a>
+  <div class="right menu">
+    <% unless user_signed_in? %>
+      <div class="item">
+        <%= link_to "Sign Up", new_user_registration_path, class: 'ui primary button' %>
+      </div>
+      <div class="item">
+        <%= link_to "Sign In", new_user_session_path, class: 'ui primary button' %>
+      </div>
+    <% else %>
+      <div class="item">
+        <%= link_to "Sign Out", destroy_user_session_path, :method => :delete, class: 'ui primary button' %>
+      </div>
+    <% end %>
+  </div>
+</div>
