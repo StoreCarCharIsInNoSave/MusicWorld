@@ -15,7 +15,8 @@ Rails.application.configure do
   config.action_controller.perform_caching = true
   config.serve_static_assets = true
   config.assets.compile = true
-
+  config.assets.js_compressor = :uglifier
+  config.assets.js_compressor = Uglifier.new(harmony: true)
   # Ensures that a master key has been made available in either ENV["RAILS_MASTER_KEY"]
   # or in config/master.key. This key is used to decrypt credentials (and other encrypted files).
   # config.require_master_key = true
