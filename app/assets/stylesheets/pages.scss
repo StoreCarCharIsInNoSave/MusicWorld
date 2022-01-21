@@ -1,3 +1,59 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.date{
+  color:black;
+}
+.comment-area{
+  border-radius: 20px !important;
+}
+
+.avatar-img{
+  border: 2px solid white;
+  border-radius: 50% !important;
+}
+.comment-form{
+  margin-top: 30px;
+}
+.buttom-review-actions{
+  display: flex;
+  align-items: center;
+}
+.local-rating-handler{
+  margin-left: 10px;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 10px;
+}
+.rounded-comment{
+
+  border-radius: 20px;
+  background-color: #b1b1b1;
+  border: 2px solid white;
+  margin-top: 10px;
+width: 600px;
+}
+.Comments-handler{
+  min-height: 100%;
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.actions{
+  margin-bottom: 20px;
+}
+
+.comment{
+  display: flex;
+  align-items: center;
+  margin-left: 30px !important;
+}
+.content{
+  margin-left: 15px !important;
+  margin-top: 5px;
+}
+.submit-review-button{
+  padding: 0;
+  border: none;
+  background: none;
+}

@@ -9,9 +9,9 @@
   <a class="item">
     Об услугах
   </a>
-  <a class="item">
-    Отзывы
-  </a>
+
+    <%=link_to 'Отзывы', pages_reviews_path, class: 'item'%>
+
   <div class="right menu">
     <% unless user_signed_in? %>
       <div class="item">

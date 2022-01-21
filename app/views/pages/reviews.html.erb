@@ -1,0 +1,68 @@
+<h2 class="ui center aligned icon header">
+
+  <% if @reviews.any? %>
+    <i class="circular sticky comments inverted outline icon"></i>
+    Feedback from our users
+  <% else %>
+    <i class="circular sticky frown inverted outline icon"></i>
+    No feedback yet
+  <% end %>
+</h2>
+<% if @reviews.any? %>
+  <div class="Comments-handler">
+    <div class="ui comments huge ">
+      <% @reviews.each do |r| %>
+        <div class="rounded-comment">
+          <div class="comment ">
+            <a class="avatar">
+              <img class="avatar-img" src="https://avatars.mds.yandex.net/i?id=2c0195cad050a569072be668048815a9-5541778-images-thumbs&n=13&exp=1">
+            </a>
+            <div class="content">
+              <a class="author"><%= r.user.email %></a>
+              <div class="metadata">
+                <span class="date"><%= r.created_at.strftime("Printed %m/%d/%Y at %I:%M%p") %></span>
+              </div>
+
+              <div class="text">
+                <%= r.comment %>
+              </div>
+              <div class="actions">
+                <div class="ui star rating user-rating" data-max-rating="5" data-rating="<%= r.mark %>"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+
+<% end %>
+<% if user_signed_in? %>
+  <h2 class="ui center aligned icon header">
+    <i class="circular sticky linechat inverted outline icon"></i>
+    Leave your comment!
+  </h2>
+  <%= form_for :review do |f| %>
+
+    <div class="ui reply form comment-form">
+      <div class="field">
+        <%= f.text_area '', class: 'comment-area' %>
+      </div>
+      <div class="buttom-review-actions">
+        <%= f.button '<div class="ui blue labeled submit icon button"> <i class="icon edit"></i> Add Reply</div>'.html_safe, class: 'submit-review-button' %>
+        <div class="local-rating-handler">
+          <div class="ui massive star rating local-rating" data-max-rating="5"></div>
+        </div>
+
+      </div>
+    </div>
+  <% end %>
+  </div>
+<% else %>
+  <h2 class="ui center aligned icon header">
+    Авторизируйтесь, чтобы оставить комментарий
+    <i class="circular sticky lock inverted icon"></i>
+
+  </h2>
+<% end %>
+
+</div>
+</div>

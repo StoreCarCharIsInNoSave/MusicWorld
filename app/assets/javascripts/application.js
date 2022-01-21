@@ -28,7 +28,18 @@ $(document).on('turbolinks:load', function () {
         })
     ;
 });
-$(document).on("turbolinks:load", function() {
+$(document).on("turbolinks:load", function () {
     $('.flexslider').flexslider();
+    $(".user-rating").rating();
+    $('.local-rating').rating();
+    $(".user-rating").rating('disable');
+
+    $('.local-rating').on('click', function (event) {
+        let rating = $('.local-rating').rating('get rating')
+        console.log(rating)
+        document.cookie = "rating=" + rating;
+    });
+   document.cookie = "rating=" + 0;
+
 
 });
