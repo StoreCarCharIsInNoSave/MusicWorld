@@ -4,4 +4,6 @@ Rails.application.routes.draw do
 
   get 'pages/reviews'
   post 'pages/reviews', to: 'pages#new_review'
+  get 'profile/update', to: 'profile#update'
+  post 'profile/update', to: 'profile#edit'
 end

@@ -10,7 +10,6 @@ class PagesController < ApplicationController
   end
 
   def new_review
-    user_signed_in?
     review = Review.new(mark: cookies[:rating], comment: params[:review][0])
     review.user = current_user
     if review.save

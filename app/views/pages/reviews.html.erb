@@ -14,9 +14,13 @@
       <% @reviews.each do |r| %>
         <div class="rounded-comment">
           <div class="comment ">
-            <a class="avatar">
-              <img class="avatar-img" src="https://avatars.mds.yandex.net/i?id=2c0195cad050a569072be668048815a9-5541778-images-thumbs&n=13&exp=1">
-            </a>
+            <% if r.user.avatar.attached? %>
+              <%= image_tag(r.user.avatar, class: 'avatar-img') %>
+            <% else %>
+              <%= image_tag('profile.jpg', class: 'avatar-img') %>
+            <% end %>
+
+
             <div class="content">
               <a class="author"><%= r.user.email %></a>
               <div class="metadata">

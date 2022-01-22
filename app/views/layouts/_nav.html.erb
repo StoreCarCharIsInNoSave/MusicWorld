@@ -22,6 +22,9 @@
       </div>
     <% else %>
       <div class="item">
+        <h1><%=link_to current_user.email.split('@')[0], profile_update_path %></h1>
+      </div>
+      <div class="item">
         <%= link_to "Sign Out", destroy_user_session_path, :method => :delete, class: 'ui primary button' %>
       </div>
     <% end %>
