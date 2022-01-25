@@ -6,6 +6,8 @@
 <%= form_for :user do |f|  %>
 
   <div class="ui segment inverted">
+    <%=render 'devise/shared/error_messages', resource: @user %>
+
     <div class="ui form inverted">
       <div class="avatar">
         <% if @user.avatar.attached? %>

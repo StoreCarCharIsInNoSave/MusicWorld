@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   before_action :user_authorized?, only: [:new_review]
+  before_action :user_admin?, only: [:destroy]
   def main
 
   end
@@ -7,6 +8,16 @@ class PagesController < ApplicationController
   def reviews
     @reviews = Review.all
     cookies[:rating] = 0
+  end
+  def destroy
+    @review = Review.find(params[:id])
+    if  @review.destroy
+      flash[:notice] = "Review deleted"
+      redirect_to pages_reviews_path
+    else
+      flash[:alert] = "Review not deleted"
+      redirect_to pages_reviews_path
+    end
   end
 
   def new_review
@@ -27,6 +38,12 @@ private
     unless current_user
       flash[:alert] = "You must be signed in to leave a review"
       redirect_to pages_reviews_path
+    end
+  end
+  def user_admin?
+    unless current_user.admin?
+      flash[:alert] = "You must be an admin to leave a review"
+      redirect_to root_path
     end
   end
 

@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   get 'pages/reviews'
   post 'pages/reviews', to: 'pages#new_review'
+  delete 'pages/destroy/:id', to: 'pages#destroy', as: 'destroy_review'
   get 'profile/update', to: 'profile#update'
   post 'profile/update', to: 'profile#edit'
   get 'unit/index', to: 'unit#index'
