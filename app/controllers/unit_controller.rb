@@ -2,7 +2,7 @@ class UnitController < ApplicationController
   before_action :require_signed_user, only: [:new, :create, :edit, :update, :destroy]
   before_action :require_admin, only: [:new, :create, :edit, :update, :destroy]
   def index
-    @units = Unit.all
+    @units = Unit.paginate(page: params[:page], per_page: 9)
   end
   def new
     @unit = Unit.new

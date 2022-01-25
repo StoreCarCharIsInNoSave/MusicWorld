@@ -6,7 +6,7 @@ class PagesController < ApplicationController
   end
 
   def reviews
-    @reviews = Review.all
+    @reviews = Review.paginate(page: params[:page], per_page: 10)
     cookies[:rating] = 0
   end
   def destroy
