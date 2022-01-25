@@ -1,6 +1,6 @@
 class UnitController < ApplicationController
-  before_action :require_signed_user, only: [:new, :create]
-  before_action :require_admin, only: [:new, :create]
+  before_action :require_signed_user, only: [:new, :create, :edit, :update, :destroy]
+  before_action :require_admin, only: [:new, :create, :edit, :update, :destroy]
   def index
     @units = Unit.all
   end
@@ -17,11 +17,36 @@ class UnitController < ApplicationController
       render 'new'
     end
   end
-
+  def show
+    @unit = Unit.find(params[:id])
+  end
+  def edit
+    @unit = Unit.find(params[:id])
+  end
+  def update
+    @unit = Unit.find(params[:id])
+    if @unit.update(unit_params)
+      flash[:notice] = "Unit updated successfully"
+      redirect_to unit_index_path
+    else
+      flash[:alert] = "Unit not updated"
+      render 'edit'
+    end
+  end
+  def destroy
+    @unit = Unit.find(params[:id])
+    if @unit.destroy
+      flash[:notice] = "Unit deleted successfully"
+      redirect_to unit_index_path
+    else
+      flash[:alert] = "Unit not deleted"
+      render 'index'
+    end
+  end
 
   private
     def unit_params
-      params.require(:unit).permit(:name, :description, :image, :big_desc)
+      params.require(:unit).permit(:name, :description, :image, :big_desc, :address, :leader, :legal_phone, :leader_phone)
     end
 
   def require_signed_user

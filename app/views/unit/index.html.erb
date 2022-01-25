@@ -8,38 +8,42 @@
   <% end %>
 </h2>
 <div class="unit-wrapper-handler">
-<div class="unit-wrapper">
-<% @units.each do |u| %>
+  <div class="unit-wrapper">
+    <% @units.each do |u| %>
 
- <div class="unit-solo-handler">
-   <div class="ui card">
-     <div class="image">
-       <% if u.image.attached? %>
-         <%= image_tag(u.image, class: 'unit-image') %>
-       <% else %>
-         <%= image_tag('unit-default.png', class: 'unit-image') %>
-       <% end %>
-     </div>
-     <div class="content unit-desc-handler">
-       <a class="header"><%=u.name %></a>
-       <div class="meta">
-         <span class="date"><%=u.created_at.strftime("Created %m/%d/%Y at %I:%M%p")  %></span>
-       </div>
-       <div class="unit-description">
-         <%=u.description %>
-       </div>
-     </div>
-     <div class="extra content">
-       <div class="ui primary button">View</div>
-     </div>
-   </div>
+      <div class="unit-solo-handler">
+        <div class="ui card">
+          <div class="image">
+            <% if u.image.attached? %>
+              <%= image_tag(u.image, class: 'unit-image') %>
+            <% else %>
+              <%= image_tag('unit-default.png', class: 'unit-image') %>
+            <% end %>
+          </div>
+          <div class="content unit-desc-handler">
+            <a class="header"><%= u.name %></a>
+            <div class="meta">
+              <span class="date"><%= u.created_at.strftime("Created %m/%d/%Y at %I:%M%p") %></span>
+            </div>
+            <div class="unit-description">
+              <%= u.description %>
+            </div>
+          </div>
+          <div class="extra content">
+            <%= link_to 'View', unit_show_path(u), class: 'ui primary button' %>
+            <% if current_user && current_user.admin? %>
+              <%= link_to 'Edit', unit_edit_path(u), class: 'ui orange button' %>
+              <%= link_to 'Delete', unit_destroy_path(u), class: 'ui red button', method: :delete %>
+            <% end %>
+          </div>
+        </div>
 
 
- </div>
+      </div>
 
 
-<% end %>
-</div>
+    <% end %>
+  </div>
 
 </div>
 

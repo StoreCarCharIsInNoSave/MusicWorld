@@ -9,4 +9,9 @@ Rails.application.routes.draw do
   get 'unit/index', to: 'unit#index'
   get 'unit/new', to: 'unit#new'
   post 'unit/new', to: 'unit#create'
+  get 'unit/show/:id', to: 'unit#show', as: 'unit_show'
+  get 'unit/edit/:id', to: 'unit#edit', as: 'unit_edit'
+  post 'unit/edit/:id', to: 'unit#update'
+  delete 'unit/destroy/:id', to: 'unit#destroy', as: 'unit_destroy'
+
 end
