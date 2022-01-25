@@ -1,7 +1,7 @@
 <h2 class="ui center aligned icon header">
   <i class="circular sticky building outline inverted outline icon"></i>
   Our Units
-  <% if current_user.admin? %>
+  <% if current_user && current_user.admin? %>
     <div>
       <%= link_to 'Add Unit', unit_new_path, class: 'ui primary button' %>
     </div>
