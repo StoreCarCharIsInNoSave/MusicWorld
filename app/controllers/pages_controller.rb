@@ -4,6 +4,9 @@ class PagesController < ApplicationController
   def main
 
   end
+  def contacts
+
+  end
 
   def reviews
     @reviews = Review.paginate(page: params[:page], per_page: 10)

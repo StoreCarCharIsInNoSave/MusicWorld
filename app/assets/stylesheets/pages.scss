@@ -69,3 +69,47 @@ width: 650px;
   right: 10px;
   bottom: 10px;
 }
+
+.inline{
+  display: flex;
+  align-items: center;
+margin-bottom: 10px;
+}
+.contact-image{
+ height: 50px;
+  border-radius: 50px;
+  border: 2px solid black;
+  padding: 5px;
+}
+.contact-text{
+  margin-left: 10px;
+  font-size: 20px;
+  font-weight: bold;
+
+}
+.contact-handler{
+  display: flex;
+align-items: center;
+
+}
+.number{
+  font-size: 20px;
+  font-weight: bold;
+  color: red;
+}
+.contact-map{
+  border-radius: 10px;
+  border: 2px solid black;
+}
+.contact-form-map-handler{
+  display: flex;
+
+}
+.contact-info-handler{
+  margin-right: 60px;
+}
+.map-handler{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

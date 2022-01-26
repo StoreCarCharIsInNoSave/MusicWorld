@@ -39,7 +39,14 @@ $(document).on("turbolinks:load", function () {
         console.log(rating)
         document.cookie = "rating=" + rating;
     });
-   document.cookie = "rating=" + 0;
+    document.cookie = "rating=" + 0;
 
+    $('.contact-form-message').hide();
+    $('.contacts-send-button').on('click',function (event) {
+        $('.contact-form-message').show();
+        setTimeout(function () {
+            $('.contact-form-message').hide();
+        }, 5000);
+    });
 
 });
