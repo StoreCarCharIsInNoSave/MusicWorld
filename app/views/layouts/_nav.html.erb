@@ -1,14 +1,18 @@
 <div class="ui mini menu massive inverted">
   <%= link_to 'MusicWorld', root_path, class: 'active item' %>
+  <div class="ui dropdown  item">
+    О нас <i class="dropdown icon"></i>
+    <div class="menu">
+      <%=link_to 'Учителя', teachers_path, class: 'item'%>
+      <%=link_to 'Администрация', administration_path, class: 'item'%>
+      <%=link_to 'История', story_path, class: 'item'%>
+    </div>
+  </div>
 
     <%=link_to 'Контакты', contacts_path, class:'item' %>
 
-  <a class="item">
-    Информация
-  </a>
-  <a class="item">
-    Об услугах
-  </a>
+
+
 
     <%= link_to "Units", unit_index_path, class: ' item' %>
 
@@ -35,5 +39,7 @@
         <%= link_to "Sign Out", destroy_user_session_path, :method => :delete, class: 'ui primary button' %>
       </div>
     <% end %>
+
   </div>
+
 </div>

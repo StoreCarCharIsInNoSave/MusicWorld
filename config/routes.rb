@@ -15,4 +15,7 @@ Rails.application.routes.draw do
   post 'unit/edit/:id', to: 'unit#update'
   delete 'unit/destroy/:id', to: 'unit#destroy', as: 'unit_destroy'
   get 'contacts/', to: 'pages#contacts'
+  get 'teachers/', to: 'pages#teachers'
+  get 'story/', to: 'pages#story'
+  get 'administration/', to: 'pages#administration'
 end

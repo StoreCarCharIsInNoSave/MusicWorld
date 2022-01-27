@@ -49,4 +49,5 @@ $(document).on("turbolinks:load", function () {
         }, 5000);
     });
 
+    $('.ui.dropdown').dropdown();
 });

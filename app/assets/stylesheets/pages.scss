@@ -1,114 +1,184 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.date{
-  color:black;
+.date {
+  color: black;
 }
-.comment-area{
+
+.comment-area {
   border-radius: 20px !important;
 }
 
-.avatar-img{
+.avatar-img {
   border: 2px solid white;
   border-radius: 50% !important;
 }
-.avatar-img{
+
+.avatar-img {
   width: 75px;
   height: 75px;
 }
-.comment-form{
+
+.comment-form {
   margin-top: 30px;
 }
-.buttom-review-actions{
+
+.buttom-review-actions {
   display: flex;
   align-items: center;
 }
-.local-rating-handler{
+
+.local-rating-handler {
   margin-left: 10px;
   border: 2px solid white;
   border-radius: 10px;
   padding: 10px;
 }
-.rounded-comment{
+
+.rounded-comment {
 
   border-radius: 20px;
   background-color: #b1b1b1;
   border: 2px solid white;
   margin-top: 10px;
-width: 650px;
+  width: 650px;
 }
-.Comments-handler{
+
+.Comments-handler {
   min-height: 100%;
   min-width: 100%;
   display: flex;
   justify-content: center;
 }
-.actions{
+
+.actions {
   margin-bottom: 20px;
 }
 
-.comment{
+.comment {
   display: flex;
   align-items: center;
   margin-left: 30px !important;
 }
-.content{
+
+.content {
   margin-left: 15px !important;
   margin-top: 5px;
 }
-.submit-review-button{
+
+.submit-review-button {
   padding: 0;
   border: none;
   background: none;
 }
-.comment-text{
+
+.comment-text {
   max-width: 450px;
 }
-.review-destroy-button{
+
+.review-destroy-button {
   position: absolute;
   right: 10px;
   bottom: 10px;
 }
 
-.inline{
+.inline {
   display: flex;
   align-items: center;
-margin-bottom: 10px;
+  margin-bottom: 10px;
 }
-.contact-image{
- height: 50px;
+
+.contact-image {
+  height: 50px;
   border-radius: 50px;
   border: 2px solid black;
   padding: 5px;
 }
-.contact-text{
+
+.contact-text {
   margin-left: 10px;
   font-size: 20px;
   font-weight: bold;
 
 }
-.contact-handler{
+
+.contact-handler {
   display: flex;
-align-items: center;
+  align-items: center;
 
 }
-.number{
+
+.number {
   font-size: 20px;
   font-weight: bold;
   color: red;
 }
-.contact-map{
+
+.contact-map {
   border-radius: 10px;
   border: 2px solid black;
 }
-.contact-form-map-handler{
+
+.contact-form-map-handler {
   display: flex;
 
 }
-.contact-info-handler{
+
+.contact-info-handler {
   margin-right: 60px;
 }
-.map-handler{
+
+.map-handler {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.administration {
+  width: 35px;
+  height: 35px;
+}
+
+.human-handler {
+  border: 2px solid black;
+  border-radius: 20px;
+  width: 500px;
+  padding: 10px;
+  background-color: #a4a4a4;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-left: 30px;
+}
+
+.human-card-image {
+  width: 100px;
+  height: 100px;
+  right: 50px;
+  top: 10px;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+
+.human-type {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin: 0;
+}
+.human-name{
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin: 0;
+}
+.human-cards-handler{
+  display: flex;
+  justify-content: space-around;
+}
+.card-wrapper{
   display: flex;
   flex-direction: column;
   align-items: center;
