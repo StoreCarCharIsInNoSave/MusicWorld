@@ -186,3 +186,15 @@
 .teacher{
   height: 270px;
 }
+.star-handler{
+  display: flex;
+  justify-content: space-around;
+}
+.star-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.student{
+  font-size: 20px;
+}
