@@ -10,10 +10,10 @@ class UnitController < ApplicationController
   def create
     @unit = Unit.new(unit_params)
     if @unit.save
-      flash[:notice] = "Unit created successfully"
+      flash[:notice] = "Отделение успешно создано"
       redirect_to unit_index_path
     else
-      flash[:alert] = "Unit not created"
+      flash[:alert] = "Отделение не создано"
       render 'new'
     end
   end
@@ -26,20 +26,20 @@ class UnitController < ApplicationController
   def update
     @unit = Unit.find(params[:id])
     if @unit.update(unit_params)
-      flash[:notice] = "Unit updated successfully"
+      flash[:notice] = "Отделение успешно изменено"
       redirect_to unit_index_path
     else
-      flash[:alert] = "Unit not updated"
+      flash[:alert] = "Отделение не изменено"
       render 'edit'
     end
   end
   def destroy
     @unit = Unit.find(params[:id])
     if @unit.destroy
-      flash[:notice] = "Unit deleted successfully"
+      flash[:notice] = "Отделение успешно удалено"
       redirect_to unit_index_path
     else
-      flash[:alert] = "Unit not deleted"
+      flash[:alert] = "Отделение не удалено"
       render 'index'
     end
   end
@@ -51,13 +51,13 @@ class UnitController < ApplicationController
 
   def require_signed_user
     unless current_user
-      flash[:alert] = "You must be logged in to do that"
+      flash[:alert] = "Вы должны войти в систему"
       redirect_to root_path
     end
   end
   def require_admin
     unless current_user.admin?
-      flash[:alert] = "You must be an admin to do that"
+      flash[:alert] = "Вы должны быть администратором"
       redirect_to root_path
     end
   end

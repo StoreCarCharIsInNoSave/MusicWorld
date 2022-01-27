@@ -8,11 +8,11 @@ class ProfileController < ApplicationController
     user_exist
     @user = current_user
     if params[:user][:password] == params[:user][:password_confirmation] && current_user.update(user_params)
-      flash[:notice] = "Profile updated"
+      flash[:notice] = "Профиль обновлен"
       sign_in(current_user, bypass: true)
       redirect_to profile_update_path
     else
-      flash[:alert] = "Check the correctness of the entered data"
+      flash[:alert] = "Проверте правильность введенных данных"
       render :update
     end
   end
@@ -25,7 +25,7 @@ class ProfileController < ApplicationController
 
   def user_exist
     if current_user.nil?
-      flash[:alert] = "You need to be logged in to edit your profile"
+      flash[:alert] = "Вы должны войти в систему"
       redirect_to root_path
     end
   end

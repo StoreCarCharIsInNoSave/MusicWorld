@@ -1,6 +1,6 @@
 <h2 class="ui center aligned icon header">
   <i class="circular sticky address card outline inverted  icon"></i>
-  Update Profile
+  Редактировать профиль
 </h2>
 
 <%= form_for :user do |f|  %>
@@ -27,13 +27,13 @@
       </div>
       <div class="field">
         <%= f.label :password %>
-        <%= f.text_field :password, placeholder: 'Password' %>
+        <%= f.text_field :password, placeholder: 'Пароль' %>
       </div>
       <div class="field">
         <%= f.label :password_confirmation %>
-        <%= f.text_field :password_confirmation, placeholder: 'Repeat your password' %>
+        <%= f.text_field :password_confirmation, placeholder: 'Повторите пароль' %>
       </div>
-      <%= f.submit "Edit person", class: 'ui button'%>
+      <%= f.submit "Изменить", class: 'ui button'%>
     </div>
   </div>
 <% end %>

@@ -1,6 +1,6 @@
 <h2 class="ui center aligned icon header">
   <i class="circular sticky address card outline inverted  icon"></i>
-  Add new unit
+  Редактировать отделение
 </h2>
 
 <%= form_for :unit do |f|  %>
@@ -16,38 +16,38 @@
         <% end %>
       </div>
       <div class="field">
-        <%=f.label :image %>
+        <%=f.label 'Картинка' %>
         <%=f.file_field :image %>
       </div>
       <div class="field">
-        <%= f.label :name %>
-        <%= f.text_field :name, placeholder: 'Name' %>
+        <%= f.label 'Название'  %>
+        <%= f.text_field :name, placeholder: 'Название' %>
       </div>
       <div class="field">
-        <%= f.label :description %>
-        <%= f.text_field :description, placeholder: 'Description' %>
+        <%= f.label 'Краткое описание' %>
+        <%= f.text_field :description, placeholder: 'Краткое описание' %>
       </div>
       <div class="field">
-        <%= f.label :address %>
-        <%= f.text_field :address, placeholder: 'Address of organisation' %>
+        <%= f.label 'Местоположение отделения'  %>
+        <%= f.text_field :address, placeholder: 'Местоположение отделения' %>
       </div>
       <div class="field">
-        <%= f.label 'Leader name' %>
-        <%= f.text_field :leader, placeholder: 'Leader name' %>
+        <%= f.label 'Имя заведующего' %>
+        <%= f.text_field :leader, placeholder: 'Имя заведующего' %>
       </div>
       <div class="field">
-        <%= f.label 'Leader phone number' %>
-        <%= f.text_field :leader_phone, placeholder: 'Leader phone number' %>
+        <%= f.label 'Телефон заведующего' %>
+        <%= f.text_field :leader_phone, placeholder: 'Телефон заведующего' %>
       </div>
       <div class="field">
-        <%= f.label 'Legal phone number' %>
-        <%= f.text_field :legal_phone, placeholder: 'Legal phone number' %>
+        <%= f.label 'Телефон юридического отдела'%>
+        <%= f.text_field :legal_phone, placeholder: 'Телефон юридического отдела' %>
       </div>
       <div class="field">
-        <%= f.label :Full_description %>
-        <%= f.text_area :big_desc, placeholder: 'Full description' %>
+        <%= f.label 'Полное описание' %>
+        <%= f.text_area :big_desc, placeholder: 'Полное описание' %>
       </div>
-      <%= f.submit "Add unit", class: 'ui button'%>
+      <%= f.submit "Добавить", class: 'ui button'%>
     </div>
   </div>
 <% end %>

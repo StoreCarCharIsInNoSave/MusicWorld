@@ -1,9 +1,9 @@
 <h2 class="ui center aligned icon header">
   <i class="circular sticky building outline inverted outline icon"></i>
-  Our Units
+  Наши отделения
   <% if current_user && current_user.admin? %>
     <div>
-      <%= link_to 'Add Unit', unit_new_path, class: 'ui primary button' %>
+      <%= link_to 'Добавить отделение', unit_new_path, class: 'ui primary button' %>
     </div>
   <% end %>
 </h2>
@@ -30,10 +30,10 @@
             </div>
           </div>
           <div class="extra content">
-            <%= link_to 'View', unit_show_path(u), class: 'ui primary button' %>
+            <%= link_to 'Открыть', unit_show_path(u), class: 'ui primary button' %>
             <% if current_user && current_user.admin? %>
-              <%= link_to 'Edit', unit_edit_path(u), class: 'ui orange button' %>
-              <%= link_to 'Delete', unit_destroy_path(u), class: 'ui red button', method: :delete %>
+              <%= link_to 'Изменить', unit_edit_path(u), class: 'ui orange button' %>
+              <%= link_to 'Удалить', unit_destroy_path(u), class: 'ui red button', style: 'margin-top:10px', method: :delete %>
             <% end %>
           </div>
         </div>

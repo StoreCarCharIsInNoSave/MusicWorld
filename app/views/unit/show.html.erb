@@ -3,8 +3,8 @@
  <%= @unit.name %>
 <div>
   <% if current_user && current_user.admin? %>
-    <%= link_to 'Edit', unit_edit_path(@unit), class: 'ui orange button' %>
-    <%= link_to 'Delete', unit_destroy_path(@unit), class: 'ui red button', method: :delete %>
+    <%= link_to 'Изменить', unit_edit_path(@unit), class: 'ui orange button' %>
+    <%= link_to 'Удалить', unit_destroy_path(@unit), class: 'ui red button', method: :delete %>
   <% end %>
 </div>
 </h2>

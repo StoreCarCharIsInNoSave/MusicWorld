@@ -2,10 +2,10 @@
 
   <% if @reviews.any? %>
     <i class="circular sticky comments inverted outline icon"></i>
-    Feedback from our users
+    Наши отзывы
   <% else %>
     <i class="circular sticky frown inverted outline icon"></i>
-    No feedback yet
+    Отзывы отсутствуют
   <% end %>
 </h2>
 <% if @reviews.any? %>
@@ -24,7 +24,7 @@
             <div class="content">
               <a class="author"><%= r.user.email %></a>
               <div class="metadata">
-                <span class="date"><%= r.created_at.strftime("Printed %m/%d/%Y at %I:%M%p") %></span>
+                <span class="date"><%= r.created_at.strftime("Отправлено %m/%d/%Y at %I:%M%p") %></span>
               </div>
 
               <div class="text comment-text">
@@ -33,7 +33,7 @@
               <div class="actions">
                 <div class="ui star rating user-rating" data-max-rating="5" data-rating="<%= r.mark %>"></div>
                 <% if current_user && current_user.admin? %>
-                  <%= link_to 'Delete', destroy_review_path(r), class: 'ui red button review-destroy-button', method: :delete %>
+                  <%= link_to 'Удалить', destroy_review_path(r), class: 'ui red button review-destroy-button', method: :delete %>
                 <% end %>
               </div>
             </div>
@@ -49,7 +49,7 @@
 <% if user_signed_in? %>
   <h2 class="ui center aligned icon header">
     <i class="circular sticky linechat inverted outline icon"></i>
-    Leave your comment!
+    Оставьте свой отзыв
   </h2>
   <%= form_for :review do |f| %>
 
@@ -58,7 +58,7 @@
         <%= f.text_area '', class: 'comment-area' %>
       </div>
       <div class="buttom-review-actions">
-        <%= f.button '<div class="ui blue labeled submit icon button"> <i class="icon edit"></i> Add Reply</div>'.html_safe, class: 'submit-review-button' %>
+        <%= f.button '<div class="ui blue labeled submit icon button"> <i class="icon edit"></i> Создать отзыв</div>'.html_safe, class: 'submit-review-button' %>
         <div class="local-rating-handler">
           <div class="ui massive star rating local-rating" data-max-rating="5"></div>
         </div>

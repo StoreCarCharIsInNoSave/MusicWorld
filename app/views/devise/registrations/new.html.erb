@@ -16,7 +16,7 @@
       <div class="field">
         <%= f.label :password %>
         <% if @minimum_password_length %>
-          <em>(<%= @minimum_password_length %> characters minimum)</em>
+          (<%= @minimum_password_length %> символов минимум)
         <% end %>
         <%= f.password_field :password, autocomplete: "new-password" %>
       </div>
@@ -24,7 +24,7 @@
         <%= f.label :password_confirmation %>
         <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
       </div>
-      <%= f.submit "Edit person", class: 'ui button'%>
+      <%= f.submit "Зарегистрироваться", class: 'ui button'%>
       <%= render "devise/shared/links" %>
     </div>
   </div>
