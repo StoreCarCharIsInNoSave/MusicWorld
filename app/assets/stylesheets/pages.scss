@@ -168,33 +168,105 @@
   margin-top: 10px;
   margin: 0;
 }
-.human-name{
+
+.human-name {
   font-size: 20px;
   font-weight: bold;
   margin-top: 10px;
   margin: 0;
 }
-.human-cards-handler{
+
+.human-cards-handler {
   display: flex;
   justify-content: space-around;
 }
-.card-wrapper{
+
+.card-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.teacher{
+
+.teacher {
   height: 270px;
 }
-.star-handler{
+
+.star-handler {
   display: flex;
   justify-content: space-around;
 }
-.star-container{
+
+.star-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.student{
+
+.student {
   font-size: 20px;
+}
+
+.story-image {
+  border: 2px solid black;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  width: 550px;
+}
+
+
+.story-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.story-text {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 30px !important;
+
+  margin: 0;
+}
+
+.news-handler {
+display: flex;
+justify-content: center;
+flex-direction: column;
+  align-items: center;
+}
+
+.news {
+  background-color: white !Important;
+  width: 800px;
+ padding: 10px;
+  border: 2px solid black;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.news-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+
+  color: rgb(255, 145, 0);
+}
+.news-text{
+  word-wrap: break-word;
+}
+.news-image{
+  border: 2px solid black;
+  border-radius: 20px;
+  width: 150px;
+  height: 150px;
+}
+.image-data{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }

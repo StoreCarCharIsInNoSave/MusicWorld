@@ -18,4 +18,5 @@ Rails.application.routes.draw do
   get 'teachers/', to: 'pages#teachers'
   get 'story/', to: 'pages#story'
   get 'administration/', to: 'pages#administration'
+  get 'news/', to: 'pages#news'
 end

@@ -7,6 +7,9 @@ class PagesController < ApplicationController
   def contacts
 
   end
+  def news
+
+  end
 
   def reviews
     @reviews = Review.paginate(page: params[:page], per_page: 10)
